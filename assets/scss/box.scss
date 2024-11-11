@@ -72,22 +72,11 @@ section.dummy-section {
 }
 
 .container {
-  width: 1920px;
+  width: 1024px;
   max-width: 100%;
 }
-.content-section {
-  width: 100%;
-  max-width: 100%;
-}
-
 .wrapper {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.inner-wrapper {
-  width: 1440px;
   max-width: 100%;
 }
 

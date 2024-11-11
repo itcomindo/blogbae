@@ -22,6 +22,9 @@ defined('ABSPATH') || die('No script kiddies please!');
 
 <body <?php body_class(); ?>>
     <?php
+    get_template_part('parts/part', 'header');
+    // get_template_part('parts/part', 'header-menu');
+    echo bb_header_menu();
     wp_body_open();
     ?>
     <main>

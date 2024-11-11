@@ -66,4 +66,5 @@ add_theme_support('menus');
 
 // Include necessary files.
 require_once THEME_PATH . '/assets/assets.php';
+require_once THEME_PATH . '/components/components.php';
 require_once THEME_PATH . '/inc/inc.php';

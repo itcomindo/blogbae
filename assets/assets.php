@@ -47,6 +47,14 @@ function mm_load_scripts_and_libs()
     // Load Boxicons.
     wp_enqueue_script('boxicons', 'https://unpkg.com/boxicons@2.1.4/dist/boxicons.js', array(), null, true);
 
+    if (is_front_page()) {
+        //call flickity js.
+        wp_enqueue_script('flickity', 'https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.2/flickity.pkgd.min.js', array(), null, true);
+
+        //call front page js.
+        wp_enqueue_script('front-page-js', get_template_directory_uri() . '/assets/js/front-page.js', array(), THEME_VERSION, true);
+    }
+
     //Global js.
     wp_enqueue_script('global-js', get_template_directory_uri() . '/assets/js/global.js', array('jquery'), THEME_VERSION, true);
 }

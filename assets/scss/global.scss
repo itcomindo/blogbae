@@ -7,13 +7,13 @@
 @use "header";
 @use "header-menu";
 @use "front-page-hero";
-// @use "flickity";
+@use "flickity";
+@use "effect";
 // @use "list";
-// @use "effect";
 // @use "topbar";
 // @use "sidebarmenu";
-// @use "headline";
-// @use "stickypost";
+@use "headline";
+@use "sticky-post";
 // @use "stwocol";
 // @use "sfourcol";
 // @use "single";

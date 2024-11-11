@@ -7,16 +7,6 @@
 
 .btn {
   transition: 0.3s linear all;
-
-  &.hover-top {
-    transition: 0.3s linear all;
-
-    &:hover {
-      transform: translateY(-3px);
-      transition: 0.3s linear all;
-    }
-  }
-
   &.border {
     border-width: 1px;
     border-style: solid;

@@ -34,3 +34,39 @@
 .box-shadow-4 {
   box-shadow: var(--box-shadow-4);
 }
+
+.item {
+  &.hover-scale {
+    .top {
+      overflow: hidden;
+
+      a {
+        img {
+          transition: transform 0.3s;
+        }
+      }
+    }
+  }
+  &:hover {
+    .top {
+      a {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  transition: 0.3s linear all;
+
+  &.hover-top {
+    transition: 0.3s linear all;
+
+    &:hover {
+      transform: translateY(-3px);
+      transition: 0.3s linear all;
+    }
+  }
+}

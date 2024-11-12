@@ -114,9 +114,12 @@ function bb_allowed() {
 			'style' => array(),
 		),
 		'div'    => array(
-			'class' => array(),
-			'style' => array(),
-			'id'    => array(),
+			'class'  => array(),
+			'style'  => array(),
+			'id'     => array(),
+			'role'   => array(),
+			'data-*' => array(), // Mengizinkan semua atribut data-*.
+			'aria-*' => array(), // Mengizinkan semua atribut aria-*.
 		),
 		'p'      => array(
 			'class' => array(),
@@ -133,6 +136,13 @@ function bb_allowed() {
 		),
 		'li'     => array(
 			'class' => array(),
+			'a'     => array(
+				'href'   => array(),
+				'title'  => array(),
+				'target' => array(),
+				'rel'    => array(),
+				'class'  => array(),
+			),
 		),
 		'h1'     => array(
 			'class' => array(),

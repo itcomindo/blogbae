@@ -28,18 +28,17 @@ require_once THEME_PATH . '/inc/options.php';
  */
 function bb_post_type_data_attribute() {
 	if ( is_single() ) {
-		$post_id      = get_the_ID();
-		$bb_post_type = carbon_get_post_meta( $post_id, 'bb_post_type' );
+		$the_post_id   = get_the_ID();
+		$the_post_type = carbon_get_post_meta( $the_post_id, 'bb_post_type' );
 
-		if ( 'video' === $bb_post_type ) {
+		if ( 'video' === $the_post_type ) {
 			$post_type = 'video';
-			return 'data-post-type="' . $post_type . '"';
-		} elseif ( 'gallery' === $bb_post_type ) {
+		} elseif ( 'gallery' === $the_post_type ) {
 			$post_type = 'gallery';
-			return 'data-post-type="' . $post_type . '"';
 		} else {
 			$post_type = 'standard';
-			return 'data-post-type="' . $post_type . '"';
 		}
+		return esc_attr( $post_type );
 	}
+	return '';
 }

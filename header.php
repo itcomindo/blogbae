@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> <?php echo esc_html( bb_post_type_data_attribute() ); ?>>
+<body <?php body_class(); ?> data-post-type="<?php echo esc_html( bb_post_type_data_attribute() ); ?>">
 	<?php
 	get_template_part( 'parts/part', 'header' );
 	bb_header_menu();

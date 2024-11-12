@@ -1,12 +1,12 @@
 <?php
-
 /**
  *
  * Components
+ *
  * @package bb
  */
 
-defined('ABSPATH') || die('No script kiddies please!');
+defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 
 require_once THEME_PATH . '/components/post-published-date.php';
 require_once THEME_PATH . '/components/post-author.php';

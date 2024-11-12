@@ -16,7 +16,8 @@ defined('ABSPATH') || die('No script kiddies please!');
             <div class="wrapper">
                 <div class="left">
                     <h1 class="head-big">Personal Blog Mas Budi Haryono</h1>
-                    <p>Blog ini saya proyeksikan sebagai blog untuk menyalurkan hobby menulis. Agar saya bisa berbagi informasi, pengetahuan dan pengelaman.</p>
+                    <p>Blog ini saya proyeksikan sebagai blog untuk menyalurkan hobby menulis. Agar saya bisa berbagi informas dan pengetahuan.</p>
+                    <a class="btn big dark max-width borad-5" href="#">Contact Me</a>
                 </div>
                 <div class="right">
                     <img class="find-this" src="<?php echo THEME_URI . '/assets/images/fpherobg.webp'; ?>" alt="">

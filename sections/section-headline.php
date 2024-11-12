@@ -45,10 +45,14 @@ defined('ABSPATH') || die('No script kiddies please!');
                                     }
                                     ?>
                                 </span>
-                                <div class="meta">
-                                    <small class="date"><?php echo bb_post_published_date($post_id); ?></small>
-                                    <small class="author"><?php echo bb_post_author($post_id); ?></small>
-                                </div>
+                                <ul class="meta list-no-style">
+                                    <li class="date">
+                                        <?php echo bb_post_published_date($post_id); ?>
+                                    </li>
+                                    <li class="author">
+                                        Written by: <?php echo bb_post_author($post_id, true); ?>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                 <?php

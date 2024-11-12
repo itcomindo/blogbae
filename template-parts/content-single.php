@@ -32,8 +32,10 @@ if (is_single()) {
                     the_content();
                     ?>
                 </div>
-                <div id="related-post" class="row">
-                    <h2 class="head-small">Related Post</h2>
+                <div id="post-tags-wr">
+                    <?php
+                    echo bb_post_tags($post_id);
+                    ?>
                 </div>
             </div>
         </div>
@@ -84,3 +86,8 @@ if (is_single()) {
         });
     </script>
 </section>
+
+<?php
+
+get_template_part('template-parts/content-single-related-post');
+get_template_part('template-parts/content-more-post');

@@ -729,6 +729,7 @@ a {
   --cp3-dark: #800000;
   --color-light-1: #eeeeee;
   --color-light-2: #ffffff;
+  --color-light-3: #dddddd;
   --transparent-light-1: rgba(255, 255, 255, 0.1);
   --transparent-light-2: rgba(255, 255, 255, 0.2);
   --transparent-light-3: rgba(255, 255, 255, 0.3);
@@ -1712,4 +1713,178 @@ https://flickity.metafizzy.co
 #sing .inner-section .container .wrapper #the-content h5,
 #sing .inner-section .container .wrapper #the-content h6 {
   font-size: var(--font-clamp-1);
+}
+#sing .inner-section .container .wrapper #post-tags-wr ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 10px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+#sing .inner-section .container .wrapper #post-tags-wr ul li {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 90%;
+}
+#sing .inner-section .container .wrapper #post-tags-wr ul li a {
+  padding: 4px 1rem;
+  background-color: var(--color-light-3);
+}
+#sing .inner-section .container .wrapper #post-tags-wr ul li a:hover {
+  background-color: var(--color-light-2);
+}
+
+#rp .inner-section .container .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 2px solid var(--cp1-dark);
+  border-bottom: 2px solid var(--cp1-dark);
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+#rp .inner-section .container .wrapper .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+#rp .inner-section .container .wrapper .top h2 {
+  text-align: center;
+}
+#rp .inner-section .container .wrapper #rp-item-wr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 375px) {
+  #rp .inner-section .container .wrapper #rp-item-wr {
+    grid-template-columns: 1fr;
+  }
+}
+
+#more .inner-section .container .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+}
+#more .inner-section .container .wrapper .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#more .inner-section .container .wrapper #more-item-wr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 767px) {
+  #more .inner-section .container .wrapper #more-item-wr {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+#more .inner-section .container .wrapper #more-item-wr .item {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+@media (max-width: 767px) {
+  #more .inner-section .container .wrapper #more-item-wr .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+#more .inner-section .container .wrapper #more-item-wr .item .left {
+  font-size: 80%;
+  padding: 10px 10px 10px 0;
+}
+@media (max-width: 767px) {
+  #more .inner-section .container .wrapper #more-item-wr .item .left {
+    padding: 0 10px;
+  }
+}
+#more .inner-section .container .wrapper #more-item-wr .item .right {
+  display: grid;
+  grid-template-columns: 1fr 366px;
+  border-bottom: 1px dashed var(--transparent-dark-1);
+}
+@media (max-width: 767px) {
+  #more .inner-section .container .wrapper #more-item-wr .item .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    border-bottom: none;
+  }
+}
+#more .inner-section .container .wrapper #more-item-wr .item .right .left-col {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  #more .inner-section .container .wrapper #more-item-wr .item .right .left-col {
+    padding: 0 10px;
+  }
+  #more .inner-section .container .wrapper #more-item-wr .item .right .left-col .excerpt {
+    font-size: 80%;
+  }
+}
+#more .inner-section .container .wrapper #more-item-wr .item .right .right-col {
+  padding: 10px;
+  aspect-ratio: 16/9;
+}
+#more .inner-section .container .wrapper #more-item-wr .item .right .right-col img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }

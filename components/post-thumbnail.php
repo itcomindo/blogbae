@@ -17,7 +17,12 @@ defined('ABSPATH') || die('No script kiddies please!');
 function bb_post_thumbnail($post_id, $size = 'full', $lazy = false, $thumb_class = 'fim')
 {
     if (has_post_thumbnail($post_id)) {
-        $thumbnail = get_the_post_thumbnail($post_id, $size, ['class' => $thumb_class]);
+        // Menggabungkan atribut dalam satu array
+        $thumbnail = get_the_post_thumbnail($post_id, $size, array(
+            'class' => $thumb_class,
+            'alt' => get_the_title($post_id),
+            'title' => get_the_title($post_id),
+        ));
 
         if ($lazy) {
             // Mengubah src menjadi data-src untuk lazy loading

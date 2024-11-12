@@ -14,3 +14,5 @@ require_once THEME_PATH . '/components/read-more.php';
 require_once THEME_PATH . '/components/post-title.php';
 require_once THEME_PATH . '/components/post-thumbnail.php';
 require_once THEME_PATH . '/components/post-excerpt.php';
+require_once THEME_PATH . '/components/post-category.php';
+require_once THEME_PATH . '/components/post-tags.php';

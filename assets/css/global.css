@@ -1576,3 +1576,140 @@ https://flickity.metafizzy.co
   padding: 10px;
   background-color: var(--cp1-light);
 }
+
+#sing .inner-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#sing .inner-section .container .wrapper {
+  width: 768px;
+  max-width: 100%;
+  overflow: hidden;
+}
+#sing .inner-section .container .wrapper h2 {
+  font-size: var(--font-clamp-3);
+}
+#sing .inner-section .container .wrapper .row {
+  padding: 10px 20px;
+}
+#sing .inner-section .container .wrapper .fim-wr {
+  aspect-ratio: 16/9;
+}
+#sing .inner-section .container .wrapper .fim-wr img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+#sing .inner-section .container .wrapper .meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#sing .inner-section .container .wrapper .meta h1 {
+  font-size: var(--font-clamp-4);
+  margin: 4px 0;
+  line-height: 1.25;
+}
+#sing .inner-section .container .wrapper .meta ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#sing .inner-section .container .wrapper .meta ul li a {
+  color: var(--cp3-dark);
+  text-decoration: underline;
+}
+#sing .inner-section .container .wrapper #the-content .content-img {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#sing .inner-section .container .wrapper #the-content ul li,
+#sing .inner-section .container .wrapper #the-content ol li {
+  margin-bottom: 0.5rem;
+}
+#sing .inner-section .container .wrapper #the-content ul {
+  list-style: square;
+}
+#sing .inner-section .container .wrapper #the-content blockquote {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+#sing .inner-section .container .wrapper #the-content blockquote p {
+  font-size: 110%;
+  font-style: italic;
+  color: var(--cp1-dark);
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+#sing .inner-section .container .wrapper #the-content blockquote p:before {
+  content: '"';
+  position: absolute;
+  top: -1rem;
+  left: -2rem;
+  font-size: 5rem;
+  margin: 0;
+  line-height: 1;
+  color: var(--cp1-dark);
+}
+#sing .inner-section .container .wrapper #the-content blockquote p:first-child::first-letter {
+  float: none;
+  color: inherit;
+  padding: unset;
+  font-size: inherit;
+  font-weight: inherit;
+}
+#sing .inner-section .container .wrapper #the-content p img {
+  max-width: 100%;
+  height: auto;
+}
+#sing .inner-section .container .wrapper #the-content p:first-child:first-letter {
+  float: left;
+  font-size: 3rem;
+  padding: 0 0.5rem 0.5rem 0;
+  font-weight: 600;
+  color: var(--cp3-dark);
+}
+#sing .inner-section .container .wrapper #the-content p:has(> img) {
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+}
+#sing .inner-section .container .wrapper #the-content h2 {
+  font-size: var(--font-clamp-3);
+}
+#sing .inner-section .container .wrapper #the-content h3 {
+  font-size: var(--font-clamp-2);
+}
+#sing .inner-section .container .wrapper #the-content h4,
+#sing .inner-section .container .wrapper #the-content h5,
+#sing .inner-section .container .wrapper #the-content h6 {
+  font-size: var(--font-clamp-1);
+}

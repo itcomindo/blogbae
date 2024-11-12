@@ -13,6 +13,13 @@ window.onload = function () {
         }
     });
 
+    /**
+     * Resizes images to match the dimensions of their parent elements.
+     * Iterates over each image and sets its width and height attributes
+     * based on the bounding rectangle of its parent element.
+     *
+     * @function resizeImages
+     */
     function resizeImages() {
         images.forEach(function (img) {
             const wrapper = img.parentElement;

@@ -573,49 +573,49 @@ section.dummy-section {
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/wp-content/themes/itcomindo/assets/fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("/wp-content/themes/blogbae/assets/fonts/Roboto-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url("/wp-content/themes/itcomindo/assets/fonts/Roboto-Light.woff2") format("woff2");
+  src: url("/wp-content/themes/blogbae/assets/fonts/Roboto-Light.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("/wp-content/themes/itcomindo/assets/fonts/Roboto-Medium.woff2") format("woff2");
+  src: url("/wp-content/themes/blogbae/assets/fonts/Roboto-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/wp-content/themes/itcomindo/assets/fonts/Roboto-Bold.woff2") format("woff2");
+  src: url("/wp-content/themes/blogbae/assets/fonts/Roboto-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 900;
   font-display: swap;
-  src: url("/wp-content/themes/itcomindo/assets/fonts/Roboto-Black.woff2") format("woff2");
+  src: url("/wp-content/themes/blogbae/assets/fonts/Roboto-Black.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 900;
   font-display: swap;
-  src: url("/wp-content/themes/itcomindo/assets/fonts/Roboto-BlackItalic.woff2") format("woff2");
+  src: url("/wp-content/themes/blogbae/assets/fonts/Roboto-BlackItalic.woff2") format("woff2");
 }
 @font-face {
   font-family: "Roboto";
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("/wp-content/themes/itcomindo/assets/fonts/Roboto-Italic.woff2") format("woff2");
+  src: url("/wp-content/themes/blogbae/assets/fonts/Roboto-Italic.woff2") format("woff2");
 }
 :root {
   --font-clamp-1: clamp(0.94rem, 0.11vw + 0.91rem, 1rem);
@@ -1594,6 +1594,64 @@ https://flickity.metafizzy.co
   width: 768px;
   max-width: 100%;
   overflow: hidden;
+}
+#sing .inner-section .container .wrapper .video-wr {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+}
+#sing .inner-section .container .wrapper .video-wr .video-player {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+#sing .inner-section .container .wrapper .video-wr .video-player iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+}
+#sing .inner-section .container .wrapper .video-wr .video-item-wr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 768px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+#sing .inner-section .container .wrapper .video-wr .video-item-wr::-webkit-scrollbar {
+  width: 10px;
+}
+#sing .inner-section .container .wrapper .video-wr .video-item-wr::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 10px;
+}
+#sing .inner-section .container .wrapper .video-wr .video-item-wr .video {
+  cursor: pointer;
+  width: calc(50% - 10px);
+  margin: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  aspect-ratio: 16/9;
+}
+#sing .inner-section .container .wrapper .video-wr .video-item-wr .video img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 #sing .inner-section .container .wrapper h2 {
   font-size: var(--font-clamp-3);

@@ -10,6 +10,7 @@ defined('ABSPATH') || die('No script kiddies please!');
 
 if (is_single()) {
     $post_id = get_the_ID();
+    $post_type = carbon_get_post_meta($post_id, 'bb_post_type');
 }
 
 ?>
@@ -24,9 +25,20 @@ if (is_single()) {
                     <small class="author">Writen by: <?php echo bb_post_author($post_id, true); ?></small>
                     <?php echo bb_post_category($post_id, true); ?>
                 </div>
-                <div class="fim-wr">
-                    <?php echo bb_post_thumbnail($post_id, 'full', false, 'fim'); ?>
-                </div>
+                <?php
+                if ('video' === $post_type) {
+                    get_template_part('template-parts/video-player');
+                } elseif ('gallery' === $post_type) {
+                    //wait
+                } else {
+                ?>
+                    <div class="fim-wr">
+                        <?php echo bb_post_thumbnail($post_id, 'full', false, 'fim'); ?>
+                    </div>
+                <?php
+                }
+                ?>
+
                 <div id="the-content" class="row">
                     <?php
                     the_content();

@@ -1,12 +1,12 @@
 <?php
-
 /**
  *
  * Page Template
+ *
  * @package bb
  */
 
-defined('ABSPATH') || die('No script kiddies please!');
+defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 
 get_header();
 get_footer();

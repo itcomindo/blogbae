@@ -1,12 +1,12 @@
 <?php
-
 /**
  *
  * Includes Menu
+ *
  * @package bb
  */
 
-defined('ABSPATH') || die('No script kiddies please!');
+defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 
 
 
@@ -18,17 +18,16 @@ defined('ABSPATH') || die('No script kiddies please!');
  *
  * @return void
  */
-function bb_register_menus()
-{
-    register_nav_menus(
-        array(
-            'header-menu' => 'Header Menu',
-            'footer-menu' => 'Footer Menu',
-            'sidebar-menu' => 'Sidebar Menu'
-        )
-    );
+function bb_register_menus() {
+	register_nav_menus(
+		array(
+			'header-menu'  => 'Header Menu',
+			'footer-menu'  => 'Footer Menu',
+			'sidebar-menu' => 'Sidebar Menu',
+		)
+	);
 }
-add_action('init', 'bb_register_menus');
+add_action( 'init', 'bb_register_menus' );
 
 
 
@@ -40,16 +39,15 @@ add_action('init', 'bb_register_menus');
  *
  * @return void
  */
-function bb_header_menu()
-{
-    wp_nav_menu(
-        array(
-            'theme_location' => 'header-menu',
-            'container' => 'nav',
-            'container_id' => 'header-menu',
-            'menu_class' => 'list-no-style horizontal-menu'
-        )
-    );
+function bb_header_menu() {
+	wp_nav_menu(
+		array(
+			'theme_location' => 'header-menu',
+			'container'      => 'nav',
+			'container_id'   => 'header-menu',
+			'menu_class'     => 'list-no-style horizontal-menu',
+		)
+	);
 }
 
 
@@ -64,14 +62,13 @@ function bb_header_menu()
  *
  * @return void
  */
-function bb_sidebar_menu()
-{
-    wp_nav_menu(
-        array(
-            'theme_location' => 'sidebar-menu',
-            'container' => 'nav',
-            'menu_id' => 'sidebar-menu',
-            'menu_class' => 'list-no-style vertical-menu'
-        )
-    );
+function bb_sidebar_menu() {
+	wp_nav_menu(
+		array(
+			'theme_location' => 'sidebar-menu',
+			'container'      => 'nav',
+			'menu_id'        => 'sidebar-menu',
+			'menu_class'     => 'list-no-style vertical-menu',
+		)
+	);
 }

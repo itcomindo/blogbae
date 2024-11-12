@@ -1,12 +1,12 @@
 <?php
-
 /**
  *
  * Footer
+ *
  * @package bb
  */
 
-defined('ABSPATH') || die('No script kiddies please!');
+defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 
 wp_footer();
 ?>

@@ -1,22 +1,22 @@
 <?php
-
 /**
  *
  * Functions and definitions
+ *
  * @package bb
  */
 
-defined('ABSPATH') || die('No script kiddies please!');
+defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 
 
 // Define theme path.
-define('THEME_PATH', get_template_directory());
+define( 'THEME_PATH', get_template_directory() );
 
 // Define theme uri.
-define('THEME_URI', get_template_directory_uri());
+define( 'THEME_URI', get_template_directory_uri() );
 
 // Define theme version.
-define('THEME_VERSION', wp_get_theme()->get('Version'));
+define( 'THEME_VERSION', wp_get_theme()->get( 'Version' ) );
 
 
 
@@ -28,12 +28,11 @@ define('THEME_VERSION', wp_get_theme()->get('Version'));
  *
  * @return void
  */
-function bb_theme_call_carbon_fields()
-{
-    if (! class_exists('\Carbon_Fields\Carbon_Fields')) {
-        require_once 'vendor/autoload.php';
-        \Carbon_Fields\Carbon_Fields::boot();
-    }
+function bb_theme_call_carbon_fields() {
+	if ( ! class_exists( '\Carbon_Fields\Carbon_Fields' ) ) {
+		require_once 'vendor/autoload.php';
+		\Carbon_Fields\Carbon_Fields::boot();
+	}
 }
 
 
@@ -46,25 +45,118 @@ function bb_theme_call_carbon_fields()
  *
  * @return void
  */
-function bb_theme_cf_loaded()
-{
-    if (! function_exists('carbon_fields_boot_plugin')) {
-        bb_theme_call_carbon_fields();
-    }
+function bb_theme_cf_loaded() {
+	if ( ! function_exists( 'carbon_fields_boot_plugin' ) ) {
+		bb_theme_call_carbon_fields();
+	}
 }
-add_action('after_setup_theme', 'bb_theme_cf_loaded');
+add_action( 'after_setup_theme', 'bb_theme_cf_loaded' );
 
 
 
 
 
 // Add theme support for various features.
-add_theme_support('title-tag');
-add_theme_support('post-thumbnails');
-add_theme_support('menus');
+add_theme_support( 'title-tag' );
+add_theme_support( 'post-thumbnails' );
+add_theme_support( 'menus' );
 
 
 // Include necessary files.
 require_once THEME_PATH . '/assets/assets.php';
 require_once THEME_PATH . '/components/components.php';
 require_once THEME_PATH . '/inc/inc.php';
+
+
+/**
+ * Allowed HTML tags and attributes for wp_kses.
+ *
+ * @return array Allowed HTML tags and attributes.
+ */
+function bb_allowed() {
+	return array(
+		'a'      => array(
+			'href'   => array(),
+			'title'  => array(),
+			'target' => array(),
+			'rel'    => array(),
+			'class'  => array(),
+		),
+		'img'    => array(
+			'src'      => array(),
+			'srcset'   => array(),
+			'alt'      => array(),
+			'title'    => array(),
+			'width'    => array(),
+			'height'   => array(),
+			'class'    => array(),
+			'loading'  => array(),
+			'id'       => array(),
+			'data-src' => array(),
+			'decoding' => array(),
+		),
+		'svg'    => array(
+			'class'   => array(),
+			'xmlns'   => array(),
+			'viewBox' => array(),
+			'fill'    => array(),
+			'stroke'  => array(),
+		),
+		'path'   => array(
+			'd'            => array(),
+			'fill'         => array(),
+			'stroke'       => array(),
+			'stroke-width' => array(),
+		),
+		'g'      => array(), // Group elements in SVG.
+		'span'   => array(
+			'class' => array(),
+			'style' => array(),
+		),
+		'div'    => array(
+			'class' => array(),
+			'style' => array(),
+			'id'    => array(),
+		),
+		'p'      => array(
+			'class' => array(),
+			'style' => array(),
+		),
+		'strong' => array(),
+		'em'     => array(),
+		'br'     => array(),
+		'ul'     => array(
+			'class' => array(),
+		),
+		'ol'     => array(
+			'class' => array(),
+		),
+		'li'     => array(
+			'class' => array(),
+		),
+		'h1'     => array(
+			'class' => array(),
+			'id'    => array(),
+		),
+		'h2'     => array(
+			'class' => array(),
+			'id'    => array(),
+		),
+		'h3'     => array(
+			'class' => array(),
+			'id'    => array(),
+		),
+		'h4'     => array(
+			'class' => array(),
+			'id'    => array(),
+		),
+		'h5'     => array(
+			'class' => array(),
+			'id'    => array(),
+		),
+		'h6'     => array(
+			'class' => array(),
+			'id'    => array(),
+		),
+	);
+}

@@ -29,7 +29,7 @@ if ( is_single() ) {
 						$video_thumbnail = $video['bb_post_video_thumbnail'];
 						?>
 						<div class="video" data-videoid="<?php echo esc_html( bb_post_video_url( $video ) ); ?>">
-							<img src="<?php echo esc_html( bb_post_video_thumbnail( $video ) ); ?>" alt="<?php echo esc_html( bb_post_video_title( $video ) ); ?>">
+							<img class="find-this" src="<?php echo esc_html( bb_post_video_thumbnail( $video ) ); ?>" alt="<?php echo esc_html( bb_post_video_title( $video ) ); ?>">
 						</div>
 						<?php
 					}

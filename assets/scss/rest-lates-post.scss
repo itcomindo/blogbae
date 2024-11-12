@@ -69,6 +69,11 @@
                   font-weight: 500;
                   margin: 4px 0;
                   line-height: 1.2;
+                  a {
+                    &:hover {
+                      text-decoration: underline;
+                    }
+                  }
                 }
               }
             }

@@ -1209,16 +1209,32 @@ https://flickity.metafizzy.co
   box-shadow: var(--box-shadow-4);
 }
 
-.item.hover-scale .top {
+.item.hover-scale .top,
+.item.hover-scale .left,
+.item.hover-scale .right {
   overflow: hidden;
 }
-.item.hover-scale .top a img {
+.item.hover-scale .top a img,
+.item.hover-scale .left a img,
+.item.hover-scale .right a img {
   -webkit-transition: -webkit-transform 0.3s;
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
 }
-.item:hover .top a img {
+.item:hover .top img,
+.item:hover .left img,
+.item:hover .right img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.item:hover .top a img,
+.item:hover .left a img,
+.item:hover .right a img {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -1566,6 +1582,9 @@ https://flickity.metafizzy.co
   margin: 4px 0;
   line-height: 1.2;
 }
+#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item .right h3 a:hover {
+  text-decoration: underline;
+}
 #rlp .inner-section .container .wrapper #wrapper-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1621,19 +1640,27 @@ https://flickity.metafizzy.co
   display: -ms-flexbox;
   display: flex;
   min-width: 768px;
-  max-width: 100%;
-  overflow-x: auto;
+  width: 768px;
+  overflow-x: scroll;
+  /* Styling scrollbar */
+}
+@media (max-width: 767px) {
+  #sing .inner-section .container .wrapper .video-wr .video-item-wr {
+    width: 100%;
+    min-width: 100%;
+  }
 }
 #sing .inner-section .container .wrapper .video-wr .video-item-wr::-webkit-scrollbar {
-  width: 10px;
+  height: 5px;
+  background-color: var(--cp3-dark);
 }
 #sing .inner-section .container .wrapper .video-wr .video-item-wr::-webkit-scrollbar-thumb {
   background-color: red;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 #sing .inner-section .container .wrapper .video-wr .video-item-wr .video {
   cursor: pointer;
-  width: calc(50% - 10px);
+  width: 33.3333333333%;
   margin: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1645,6 +1672,8 @@ https://flickity.metafizzy.co
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   aspect-ratio: 16/9;
 }
 #sing .inner-section .container .wrapper .video-wr .video-item-wr .video img {
@@ -1939,6 +1968,7 @@ https://flickity.metafizzy.co
 #more .inner-section .container .wrapper #more-item-wr .item .right .right-col {
   padding: 10px;
   aspect-ratio: 16/9;
+  overflow: hidden;
 }
 #more .inner-section .container .wrapper #more-item-wr .item .right .right-col img {
   width: 100%;

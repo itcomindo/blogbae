@@ -56,6 +56,7 @@ function mm_load_scripts_and_libs()
     }
 
     //Global js.
+    wp_enqueue_script('find-this-js', get_template_directory_uri() . '/assets/js/find-this.js', array('jquery'), THEME_VERSION, true);
     wp_enqueue_script('global-js', get_template_directory_uri() . '/assets/js/global.js', array('jquery'), THEME_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'mm_load_scripts_and_libs', 1);

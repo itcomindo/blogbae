@@ -55,15 +55,15 @@ function mm_load_scripts_and_libs() {
 
 	if ( is_single() ) {
 
-		$the_post_id = get_the_ID();
+		$the_post_id   = get_the_ID();
 		$the_post_type = carbon_get_post_meta( $the_post_id, 'bb_post_type' );
-	
+
 		if ( 'video' === $the_post_type ) {
 			$bb_post_video = carbon_get_post_meta( $the_post_id, 'bb_post_video' );
-			
+
 			// Count Array in $bb_post_video.
-			$video_count = is_array($bb_post_video) ? count($bb_post_video) : 0;
-	
+			$video_count = is_array( $bb_post_video ) ? count( $bb_post_video ) : 0;
+
 			// If there are more than 3 videos, enqueue Flickity.
 			if ( $video_count > 2 ) {
 
@@ -74,7 +74,7 @@ function mm_load_scripts_and_libs() {
 				wp_enqueue_script( 'video-js', get_template_directory_uri() . '/assets/js/video.js', array(), THEME_VERSION, true );
 			}
 		}
-	
+
 		// Call single.js.
 		wp_enqueue_script( 'single-js', get_template_directory_uri() . '/assets/js/single.js', array(), THEME_VERSION, true );
 	}

@@ -3,8 +3,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //JQuery start below.
 
 
-        // sticky post flickity start.
-        function videoFlickity() {
+        function galleryFlickity() {
             jQuery('.items').flickity({
                 //options.
                 'cellAlign': 'left',
@@ -16,8 +15,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
             });
         }
-        videoFlickity();
-        // sticky post flickity end.
+        galleryFlickity();
 
 
 

@@ -63,33 +63,33 @@ function bb_post_options() {
                             '
 					),
 
-				// complex field contain image field for gallery images. show only if gallery post is selected.
-				Field::make( 'complex', 'bb_post_gallery', 'Gallery' )
+
+					// Media Gallery field to select multiple images. show only if gallery post is selected.
+
+					Field::make('complex', 'bb_post_gallery', 'Gallery')
 					->add_fields(
 						array(
-							Field::make( 'image', 'bb_post_gallery_image', 'Image' )
-								->set_value_type( 'url' )
-								->set_help_text( 'Upload the image for the gallery.' ),
-						)
-					)
-					->set_conditional_logic(
-						array(
-							array(
-								'field' => 'bb_post_type',
-								'value' => 'gallery',
-							),
+							// Title field.
+							Field::make('text', 'bb_post_gallery_title', 'Title')
+								->set_help_text('Enter the title for gallery post.'),
+							// Image URL.
+							Field::make('image', 'bb_post_gallery_url', 'Image')
+								->set_value_type('url')
+								->set_help_text('Upload image for gallery post.'),
 						)
 					)
 					->set_layout( 'tabbed-horizontal' )
 					->set_header_template(
 						'
-                                <% if (bb_post_gallery_image) { %>
-                                    <img src="<%- bb_post_gallery_image %>" style="max-width: 100px; max-height: 100px;">
+                                <% if (bb_post_gallery_title) { %>
+                                    <%- bb_post_gallery_title %>
                                 <% } else { %>
-                                    Image
+                                    Title
                                 <% } %>
                             '
-					),
+					)
+
+
 
 			)
 		);

@@ -29,7 +29,7 @@ if ( is_single() ) {
 				if ( 'video' === $the_post_type ) {
 					get_template_part( 'template-parts/video-player' );
 				} elseif ( 'gallery' === $the_post_type ) {
-					return '';
+					get_template_part( 'template-parts/gallery-player' );
 				} else {
 					?>
 					<div class="fim-wr">

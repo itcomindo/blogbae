@@ -21,7 +21,7 @@ if ( is_single() ) {
 				<div class="video-player">
 				<iframe width="768" height="432" src="#" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
-				<div class="video-item-wr">
+				<div class="items">
 					<?php
 					foreach ( $bb_post_video as $video ) {
 						$video_title     = $video['bb_post_video_title'];

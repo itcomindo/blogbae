@@ -12,11 +12,11 @@ defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 /**
  * Retrieves the tags of a post.
  *
- * @param int $post_id The ID of the post.
+ * @param int $the_post_id The ID of the post.
  * @return string The tags of the post.
  */
-function bb_post_tags( $post_id ) {
-	$tags   = get_the_tags( $post_id );
+function bb_post_tags( $the_post_id ) {
+	$tags   = get_the_tags( $the_post_id );
 	$output = '';
 
 	if ( $tags ) {

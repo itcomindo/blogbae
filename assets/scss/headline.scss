@@ -17,10 +17,28 @@
           overflow: hidden;
 
           .top {
+            position: relative;
             overflow: hidden;
             a {
               img {
                 transition: 0.3s linear all;
+              }
+            }
+
+            .icon {
+              position: absolute;
+              top: 8px;
+              right: 8px;
+              width: 20px;
+              height: 20px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              z-index: 2;
+              background-color: var(--transparent-light-7);
+              i {
+                font-size: 60%;
               }
             }
           }

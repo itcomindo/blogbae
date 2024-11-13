@@ -168,5 +168,8 @@ function bb_allowed() {
 			'class' => array(),
 			'id'    => array(),
 		),
+		'i'      => array(
+			'class' => array(),
+		),
 	);
 }

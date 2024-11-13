@@ -17,3 +17,4 @@ require_once THEME_PATH . '/components/post-excerpt.php';
 require_once THEME_PATH . '/components/post-category.php';
 require_once THEME_PATH . '/components/post-tags.php';
 require_once THEME_PATH . '/components/post-video.php';
+require_once THEME_PATH . '/components/post-type-icon.php';

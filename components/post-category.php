@@ -11,13 +11,13 @@ defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 /**
  * Generates a list of categories for a given post.
  *
- * @param int  $post_id The ID of the post.
+ * @param int  $the_the_post_id The ID of the post.
  * @param bool $link    Optional. Whether to link the category names. Default true.
  *
  * @return string HTML output of the category list.
  */
-function bb_post_category( $post_id, $link = true ) {
-	$categories = get_the_category( $post_id );
+function bb_post_category( $the_the_post_id, $link = true ) {
+	$categories = get_the_category( $the_the_post_id );
 	$output     = '';
 	if ( $categories ) {
 		$output .= '<ul class="list-no-style category-list">';

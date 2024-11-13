@@ -12,13 +12,13 @@ defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 /**
  * Retrieves the title of a post.
  *
- * @param int $post_id The ID of the post.
+ * @param int $the_post_id The ID of the post.
  * @param int $trim    Optional. The number of characters to trim the title to. Default 100.
  *
  * @return string The title of the post.
  */
-function bb_post_title( $post_id, $trim = 100 ) {
-	$title = get_the_title( $post_id );
+function bb_post_title( $the_post_id, $trim = 100 ) {
+	$title = get_the_title( $the_post_id );
 
 	if ( strlen( $title ) <= $trim ) {
 		return $title;

@@ -1719,22 +1719,13 @@ https://flickity.metafizzy.co
   display: flex;
   min-width: 768px;
   width: 768px;
-  overflow-x: scroll;
-  /* Styling scrollbar */
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   #sing .inner-section .container .wrapper .video-wr .video-item-wr {
     width: 100%;
     min-width: 100%;
   }
-}
-#sing .inner-section .container .wrapper .video-wr .video-item-wr::-webkit-scrollbar {
-  height: 5px;
-  background-color: var(--cp3-dark);
-}
-#sing .inner-section .container .wrapper .video-wr .video-item-wr::-webkit-scrollbar-thumb {
-  background-color: red;
-  border-radius: 5px;
 }
 #sing .inner-section .container .wrapper .video-wr .video-item-wr .video {
   cursor: pointer;

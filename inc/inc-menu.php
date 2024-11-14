@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * Includes Menu
@@ -6,7 +7,7 @@
  * @package bb
  */
 
-defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
+defined('ABSPATH') || die('No script kiddies please!');
 
 
 
@@ -18,16 +19,18 @@ defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
  *
  * @return void
  */
-function bb_register_menus() {
+function bb_register_menus()
+{
 	register_nav_menus(
 		array(
 			'header-menu'  => 'Header Menu',
 			'footer-menu'  => 'Footer Menu',
 			'sidebar-menu' => 'Sidebar Menu',
+			'mobile-menu' => 'Mobile Menu',
 		)
 	);
 }
-add_action( 'init', 'bb_register_menus' );
+add_action('init', 'bb_register_menus');
 
 
 
@@ -39,7 +42,8 @@ add_action( 'init', 'bb_register_menus' );
  *
  * @return void
  */
-function bb_header_menu() {
+function bb_header_menu()
+{
 	wp_nav_menu(
 		array(
 			'theme_location' => 'header-menu',
@@ -62,12 +66,36 @@ function bb_header_menu() {
  *
  * @return void
  */
-function bb_sidebar_menu() {
+function bb_sidebar_menu()
+{
 	wp_nav_menu(
 		array(
 			'theme_location' => 'sidebar-menu',
 			'container'      => 'nav',
 			'menu_id'        => 'sidebar-menu',
+			'menu_class'     => 'list-no-style vertical-menu',
+		)
+	);
+}
+
+
+
+/**
+ * Displays the mobile menu.
+ *
+ * This function uses the wp_nav_menu() function to display a navigation menu
+ * assigned to the 'mobile-menu' theme location. The menu is wrapped in a <nav>
+ * container with the ID 'mobile-menu' and the class 'list-no-style vertical-menu'.
+ *
+ * @return void
+ */
+function bb_mobile_menu()
+{
+	wp_nav_menu(
+		array(
+			'theme_location' => 'mobile-menu',
+			'container'      => 'nav',
+			'menu_id'        => 'mobile-menu',
 			'menu_class'     => 'list-no-style vertical-menu',
 		)
 	);

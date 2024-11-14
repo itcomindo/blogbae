@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * Section Header
@@ -6,7 +7,7 @@
  * @package bb
  */
 
-defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
+defined('ABSPATH') || die('No script kiddies please!');
 
 ?>
 
@@ -19,7 +20,7 @@ defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 				</div>
 				<div class="right">
 					<div id="header-search-wr" class="item">
-						<form id="searchform" method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<form id="searchform" method="get" action="<?php echo esc_url(home_url('/')); ?>">
 							<input type="text" class="search-field" name="s" placeholder="Search" value="<?php echo get_search_query(); ?>">
 							<button><i class="fas fa-magnifying-glass"></i></button>
 						</form>
@@ -28,6 +29,12 @@ defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 						<a href="#" class="btn medium hover-top">Signin</a>
 						<a href="#" class="btn border medium light hover-top borad-5">Signup</a>
 					</div>
+
+					<div id="head-trigger" class="mm-trigger">
+						<i class="fas fa-bars"></i>
+					</div>
+
+
 				</div>
 			</div>
 		</div>

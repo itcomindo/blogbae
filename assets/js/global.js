@@ -18,10 +18,56 @@ window.addEventListener('DOMContentLoaded', (event) => {
         stickyJs();
         // StickyJS End.
 
+        //Call Mobile Menu Start.
+        //Call Mobile Menu Start.
+        function callMobileMenu() {
+            var $screenWidth = screenWidth();
+            if ($screenWidth < 769) {
+                var $trigger = jQuery('.mm-trigger');
+
+                // Event untuk membuka menu ketika trigger diklik
+                $trigger.on('click', function (e) {
+                    e.stopPropagation();
+                    jQuery(this).hide();
+                    jQuery('#mm').toggleClass('active');
+                    setTimeout(function () {
+                        jQuery('#mm .close').toggleClass('active');
+                    }, 1000);
+                });
+
+                // Event untuk menutup menu ketika tombol close diklik
+                jQuery('#mm .close').on('click', function () {
+                    jQuery('#mm').removeClass('active');
+                    jQuery('#mm .close').removeClass('active');
+                    $trigger.show();
+                });
+
+                // Event untuk menutup menu ketika klik di luar elemen #mm
+                jQuery(document).on('click', function (e) {
+                    if (!jQuery(e.target).closest('#mm').length && !jQuery(e.target).closest('.mm-trigger').length) {
+                        jQuery('#mm').removeClass('active');
+                        jQuery('#mm .close').removeClass('active');
+                        $trigger.show();
+                    }
+                });
+
+                // Event untuk menutup menu ketika #mm sendiri diklik
+                jQuery('#mm').on('click', function () {
+                    jQuery('#mm').removeClass('active');
+                    jQuery('#mm .close').removeClass('active');
+                    $trigger.show();
+                });
+            }
+        }
+        callMobileMenu();
+        //Call Mobile Menu End.
+
+
 
         // Resize Function Start.
         jQuery(window).resize(function () {
             stickyJs();
+            callMobileMenu();
         });
         // Resize Function End.
 

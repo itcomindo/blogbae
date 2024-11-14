@@ -1254,6 +1254,44 @@ https://flickity.metafizzy.co
   transition: 0.3s linear all;
 }
 
+span.icon {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.post-comment-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: var(--cp1-dark);
+  font-size: 80%;
+  z-index: 1;
+}
+.post-comment-icon i {
+  margin-right: 4px;
+}
+
 #headline .inner-section .container .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1266,6 +1304,9 @@ https://flickity.metafizzy.co
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: unset;
   }
+}
+#headline .inner-section .container .wrapper .post-comment-icon {
+  color: var(--cp1-dark);
 }
 #headline .inner-section .container .wrapper .item {
   overflow: hidden;
@@ -1282,21 +1323,6 @@ https://flickity.metafizzy.co
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 30px;
-  height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   z-index: 2;
   background-color: var(--transparent-light-7);
 }
@@ -1319,7 +1345,6 @@ https://flickity.metafizzy.co
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-top: 10px;
-  margin-bottom: 10px;
 }
 #headline .inner-section .container .wrapper .item .meta li {
   font-weight: 500;
@@ -1511,7 +1536,14 @@ https://flickity.metafizzy.co
   }
 }
 #sticky .inner-section .container .wrapper .item .top {
+  position: relative;
   aspect-ratio: 16/9;
+}
+#sticky .inner-section .container .wrapper .item .top .post-comment-icon {
+  position: absolute;
+  background-color: var(--transparent-light-4);
+  left: 8px;
+  top: 8px;
 }
 #sticky .inner-section .container .wrapper .item .top a img {
   width: 100%;
@@ -1523,21 +1555,6 @@ https://flickity.metafizzy.co
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 20px;
-  height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   z-index: 2;
   background-color: var(--transparent-light-7);
   color: var(--color-primary);
@@ -1623,6 +1640,13 @@ https://flickity.metafizzy.co
   position: relative;
   overflow: hidden;
 }
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .left .post-comment-icon {
+  z-index: 1;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  background-color: var(--transparent-light-4);
+}
 #rlp .inner-section .container .wrapper #wrapper-left .items .item .left a {
   display: block;
 }
@@ -1638,21 +1662,6 @@ https://flickity.metafizzy.co
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 20px;
-  height: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   z-index: 2;
   background-color: var(--transparent-light-7);
 }
@@ -1760,6 +1769,14 @@ https://flickity.metafizzy.co
 #rlp .inner-section .container .wrapper #wrapper-right .sidebars .sidebar-content ul.items li.item .left {
   aspect-ratio: 16/9;
   overflow: hidden;
+  position: relative;
+}
+#rlp .inner-section .container .wrapper #wrapper-right .sidebars .sidebar-content ul.items li.item .left .post-comment-icon {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  background-color: var(--transparent-light-4);
+  z-index: 1;
 }
 #rlp .inner-section .container .wrapper #wrapper-right .sidebars .sidebar-content ul.items li.item .right {
   display: -webkit-box;

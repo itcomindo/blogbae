@@ -13,6 +13,10 @@
           grid-template-rows: unset;
         }
 
+        .post-comment-icon {
+          color: var(--cp1-dark);
+        }
+
         .item {
           overflow: hidden;
 
@@ -29,12 +33,6 @@
               position: absolute;
               top: 8px;
               right: 8px;
-              width: 30px;
-              height: 30px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
               z-index: 2;
               background-color: var(--transparent-light-7);
               i {
@@ -53,7 +51,6 @@
             flex-direction: row;
             justify-content: space-between;
             margin-top: 10px;
-            margin-bottom: 10px;
             li {
               font-weight: 500;
               a {

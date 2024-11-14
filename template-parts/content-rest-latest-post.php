@@ -14,6 +14,7 @@ $the_post_id = get_the_ID();
 
 <div class="item infinite">
     <div class="left">
+        <?php echo bb_post_comment_icon($the_post_id); ?>
         <span class="icon"><?php echo wp_kses(bb_post_type_icon($the_post_id), bb_allowed()); ?></span>
         <a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>">
             <?php echo wp_kses(bb_post_thumbnail($the_post_id, 'full', true, 'fim'), bb_allowed()); ?>

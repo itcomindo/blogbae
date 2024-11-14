@@ -1,0 +1,22 @@
+span.icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-comment-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: var(--cp1-dark);
+  font-size: 80%;
+  z-index: 1;
+  i {
+    margin-right: 4px;
+  }
+}

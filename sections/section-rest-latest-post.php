@@ -69,6 +69,7 @@ defined('ABSPATH') || die('No script kiddies please!');
 						?>
 								<li class="item">
 									<div class="left">
+										<?php echo bb_post_comment_icon($the_post_id); ?>
 										<a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>"><?php echo bb_post_thumbnail($the_post_id, 'full', true, 'fim'); ?></a>
 									</div>
 									<div class="right">

@@ -15,6 +15,8 @@ use Carbon_Fields\Field;
 function bb_theme_options()
 {
     $option_container = Container::make('theme_options', 'Theme Options')
+        // Single Post Options Tab.
+        ->add_tab('Post', bb_option_single_post())
         // Tab Sidebar.
         ->add_tab('Sidebar', bb_option_sidebar())
         // Tab Blog

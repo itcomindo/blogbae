@@ -15,6 +15,7 @@ require_once THEME_PATH . '/inc/query.php';
 require_once THEME_PATH . '/inc/plugins.php';
 require_once THEME_PATH . '/inc/options/options.php';
 require_once THEME_PATH . '/inc/custom-post-column.php';
+require_once THEME_PATH . '/inc/text-captcha.php';
 
 
 

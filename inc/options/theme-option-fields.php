@@ -73,3 +73,24 @@ function bb_option_sidebar()
 
     );
 }
+
+
+
+
+function bb_option_single_post()
+{
+    return array(
+        // seperator for single post options.
+        Field::make('separator', 'sepsinglepost', 'Single Post')
+            ->set_classes('sep'),
+        // Complex field for custom text captcha containing text for question and text for answer.
+        Field::make('complex', 'bbo_custom_text_captcha', 'Custom Text Captcha')
+            ->add_fields(array(
+                Field::make('text', 'bbo_captcha_question', 'Captcha question')
+                    ->set_help_text('Enter the question for the captcha.'),
+
+                Field::make('text', 'bbo_captcha_answer', 'Captcha answer')
+                    ->set_help_text('Enter the answer for the captcha.'),
+            ))
+    );
+}

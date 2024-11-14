@@ -48,8 +48,49 @@ defined('ABSPATH') || die('No script kiddies please!');
 
 				</div>
 				<div id="wrapper-right" class="col">
-					<div class="inner-col">
-						<h3>Sidebar</h3>
+					<div class="sidebars inner-col">
+
+						<div class="sidebar-content">
+							<h3>Siderbar H3</h3>
+							<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio impedit cupiditate quaerat harum! Nulla, unde.</span>
+						</div>
+
+						<?php
+						$pwc = bb_post_has_comments_query();
+						if ($pwc->have_posts()) {
+							$the_post_id = get_the_ID();
+							$post_date = get_the_date('Y-m-d', $the_post_id);
+							echo '<div class="sidebar-content">';
+							echo '<h3>Viral</h3>';
+							echo '<ul class="items list-no-style">';
+							while ($pwc->have_posts()) {
+								$pwc->the_post();
+								$the_post_id = get_the_ID();
+						?>
+								<li class="item">
+									<div class="left">
+										<a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>"><?php echo bb_post_thumbnail($the_post_id, 'full', true, 'fim'); ?></a>
+									</div>
+									<div class="right">
+										<h3><a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>"><?php echo bb_post_title($the_post_id, 70); ?></a></h3>
+									</div>
+								</li>
+						<?php
+							}
+							echo '</ul>';
+							echo '</div>';
+						}
+						wp_reset_postdata();
+						?>
+
+
+
+
+						<div class="sidebar-content">
+							<a href="#"><img src="<?php echo THEME_URI . '/assets/images/fpherobg.webp'; ?>" alt="TEST"></a>
+						</div>
+
+
 					</div>
 				</div>
 

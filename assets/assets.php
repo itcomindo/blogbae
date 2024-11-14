@@ -94,12 +94,20 @@ function mm_load_scripts_and_libs()
 			}
 		}
 
+
+
 		// Call single.js.
 		wp_enqueue_script('single-js', get_template_directory_uri() . '/assets/js/single.js', array(), THEME_VERSION, true);
 	}
 
+
+	// Call StickyJs https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.3.0/sticky.min.js.
+	wp_enqueue_script('sticky-js', 'https://cdnjs.cloudflare.com/ajax/libs/sticky-js/1.3.0/sticky.min.js', array(), '1.3.0', true);
+
 	// Global js.
 	wp_enqueue_script('find-this-js', get_template_directory_uri() . '/assets/js/find-this.js', array('jquery'), THEME_VERSION, true);
+
+
 	wp_enqueue_script('global-js', get_template_directory_uri() . '/assets/js/global.js', array('jquery'), THEME_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'mm_load_scripts_and_libs', 1);

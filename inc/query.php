@@ -111,3 +111,55 @@ function bb_rest_post_query($post_to_exclude = 7, $post_perpage = 3)
 
 	return $query;
 }
+
+
+
+function bb_post_has_comments_query()
+{
+	// Mendapatkan nilai post_date_range dan min_comment_to_show dari Carbon Fields.
+	$post_date_range = carbon_get_theme_option('post_date_range');
+	$min_comment_to_show = carbon_get_theme_option('min_comment_to_show');
+	$bb_sidebar_post_number = carbon_get_theme_option('bb_sidebar_post_number');
+
+	// Menghitung tanggal batas berdasarkan post_date_range.
+	$date_query = array(
+		'after'     => date('Y-m-d', strtotime("-$post_date_range days")),
+		'inclusive' => true,
+	);
+
+	// Argumen awal WP_Query tanpa filter `comment_count >= min_comment_to_show`.
+	$args = array(
+		'post_type'           => 'post',
+		'posts_per_page'      => $bb_sidebar_post_number,
+		'orderby'             => 'comment_count',
+		'order'               => 'DESC',
+		'ignore_sticky_posts' => 1,
+		'date_query'          => array($date_query),
+	);
+
+	$query = new WP_Query($args);
+
+	// Filter hasil query untuk hanya menampilkan post dengan comment_count >= min_comment_to_show
+	$filtered_posts = array_filter($query->posts, function ($post) use ($min_comment_to_show) {
+		return $post->comment_count >= $min_comment_to_show;
+	});
+
+	// Update hasil query dengan post yang telah difilter
+	$query->posts = $filtered_posts;
+	$query->post_count = count($filtered_posts);
+
+	return $query;
+}
+
+
+
+function bb_post_has_comments_queryxxxx()
+{
+	$args = array(
+		'post_type'           => 'post',
+		'posts_per_page'      => 5,
+		'ignore_sticky_posts' => 1,
+	);
+	$query = new WP_Query($args);
+	return $query;
+}

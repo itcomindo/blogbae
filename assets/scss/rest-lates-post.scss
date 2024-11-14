@@ -15,13 +15,17 @@
           flex-direction: column;
           overflow: hidden;
 
+          #prev-next-btn {
+            display: none;
+          }
+
           .top {
             h2 {
               font-size: var(--font-clamp-2);
             }
           }
 
-          .items-wr {
+          .items {
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -78,10 +82,24 @@
                 }
               }
               .right {
+                position: relative;
                 padding: 0 10px 0 10px;
                 .date {
                   font-size: 60%;
                 }
+
+                .count {
+                  width: 40px;
+                  height: 40px;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                }
+
                 h3 {
                   font-size: var(--font-clamp-1);
                   font-weight: 500;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * Functions and definitions
@@ -6,17 +7,17 @@
  * @package bb
  */
 
-defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
+defined('ABSPATH') || die('No script kiddies please!');
 
 
 // Define theme path.
-define( 'THEME_PATH', get_template_directory() );
+define('THEME_PATH', get_template_directory());
 
 // Define theme uri.
-define( 'THEME_URI', get_template_directory_uri() );
+define('THEME_URI', get_template_directory_uri());
 
 // Define theme version.
-define( 'THEME_VERSION', wp_get_theme()->get( 'Version' ) );
+define('THEME_VERSION', wp_get_theme()->get('Version'));
 
 
 
@@ -28,8 +29,9 @@ define( 'THEME_VERSION', wp_get_theme()->get( 'Version' ) );
  *
  * @return void
  */
-function bb_theme_call_carbon_fields() {
-	if ( ! class_exists( '\Carbon_Fields\Carbon_Fields' ) ) {
+function bb_theme_call_carbon_fields()
+{
+	if (! class_exists('\Carbon_Fields\Carbon_Fields')) {
 		require_once 'vendor/autoload.php';
 		\Carbon_Fields\Carbon_Fields::boot();
 	}
@@ -45,21 +47,22 @@ function bb_theme_call_carbon_fields() {
  *
  * @return void
  */
-function bb_theme_cf_loaded() {
-	if ( ! function_exists( 'carbon_fields_boot_plugin' ) ) {
+function bb_theme_cf_loaded()
+{
+	if (! function_exists('carbon_fields_boot_plugin')) {
 		bb_theme_call_carbon_fields();
 	}
 }
-add_action( 'after_setup_theme', 'bb_theme_cf_loaded' );
+add_action('after_setup_theme', 'bb_theme_cf_loaded');
 
 
 
 
 
 // Add theme support for various features.
-add_theme_support( 'title-tag' );
-add_theme_support( 'post-thumbnails' );
-add_theme_support( 'menus' );
+add_theme_support('title-tag');
+add_theme_support('post-thumbnails');
+add_theme_support('menus');
 
 
 // Include necessary files.
@@ -73,7 +76,8 @@ require_once THEME_PATH . '/inc/inc.php';
  *
  * @return array Allowed HTML tags and attributes.
  */
-function bb_allowed() {
+function bb_allowed()
+{
 	return array(
 		'a'      => array(
 			'href'   => array(),

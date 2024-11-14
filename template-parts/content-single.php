@@ -49,6 +49,13 @@ if ( is_single() ) {
 					echo wp_kses( bb_post_tags( $the_post_id ), bb_allowed() );
 					?>
 				</div>
+
+				<!-- Comment Form -->
+				 <?php
+				 get_template_part( 'template-parts/comment-form' );
+				 ?>
+
+
 			</div>
 		</div>
 	</div>

@@ -84,7 +84,7 @@ function bb_query($post_perpage = 6, $ignore_sticky = true)
  *
  * @return WP_Query  The custom query object.
  */
-function bb_rest_post_query($post_to_exclude = 7, $post_perpage = 3)
+function bb_rest_post_query($post_to_exclude = 7, $post_perpage = 6)
 {
 	$exclude_args  = array(
 		'post_type'      => 'post',
@@ -96,18 +96,17 @@ function bb_rest_post_query($post_to_exclude = 7, $post_perpage = 3)
 	);
 	$exclude_query = new WP_Query($exclude_args);
 	$exclude_ids   = $exclude_query->posts;
-
-	$args = array(
+	$args          = array(
 		'post_type'           => 'post',
 		'post_status'         => 'publish',
 		'posts_per_page'      => $post_perpage,
 		'orderby'             => 'date',
 		'order'               => 'DESC',
 		'ignore_sticky_posts' => 1,
+		'paged'               => get_query_var('paged') ? get_query_var('paged') : 1,
 		'post__not_in'        => $exclude_ids,
-		'paged'               => min(get_query_var('paged') ? get_query_var('paged') : 1, $total_pages),
+		'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
 	);
-	$query = new WP_Query($args);
-
+	$query         = new WP_Query($args);
 	return $query;
 }

@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * Section Rest Latest Post
@@ -6,7 +7,7 @@
  * @package bb
  */
 
-defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
+defined('ABSPATH') || die('No script kiddies please!');
 
 ?>
 <section id="rlp" class="section-medium">
@@ -19,45 +20,42 @@ defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 					</div>
 					<?php
 
-					$query = bb_rest_post_query( 7 );
-					if ( $query->have_posts() ) {
-						?>
+					$post_to_show = carbon_get_theme_option('bb_rest_latest_post_number');
 
-						<div class="items-wr">
-							<?php
-							while ( $query->have_posts() ) {
-								$query->the_post();
-								$the_post_id = get_the_ID();
-								?>
-								<div class="item">
-									<div class="left">
-									<span class="icon"><?php echo wp_kses( bb_post_type_icon( $the_post_id ), bb_allowed() ); ?></span>
-										<a href="<?php echo esc_html( get_the_permalink() ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>"><?php echo wp_kses( bb_post_thumbnail( $the_post_id, 'full', true, 'fim' ), bb_allowed() ); ?></a>
-									</div>
-									<div class="right">
-
-										<small class="date"><?php echo esc_html( bb_post_published_date( $the_post_id ) ); ?></small>
-										<h3><a href="<?php echo esc_html( get_the_permalink() ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>"><?php echo esc_html( bb_post_title( $the_post_id, 100 ) ); ?></a></h3>
-
-										<!-- Excerpt -->
-
-										<p class="text-smaller"><?php echo esc_html( bb_post_excerpt( $the_post_id, 50 ) ); ?></p>
-
-
-									</div>
-								</div>
-								<?php
-							}
-					}
-						wp_reset_postdata();
+					$query = bb_rest_post_query(7, $post_to_show);
+					$count = 0;
+					if ($query->have_posts()) {
 					?>
+
+						<div class="items infinite">
+						<?php
+						while ($query->have_posts()) {
+							$count++;
+							$query->the_post();
+							$the_post_id = get_the_ID();
+							get_template_part('template-parts/content', 'rest-latest-post');
+						}
+					}
+					wp_reset_postdata();
+						?>
 						</div>
+
+						<div id="prev-next-btn">
+							<div class="prev"><?php previous_posts_link('Previous'); ?></div>
+							<div class="next"><?php next_posts_link('Next', $rest->max_num_pages); ?></div>
+						</div>
+
+
 				</div>
 				<div id="wrapper-right" class="col">
 					<div class="inner-col">
 						<h3>Sidebar</h3>
 					</div>
 				</div>
+
+
+
+				<!-- Wrapper End Above This Line -->
 			</div>
 		</div>
 	</div>

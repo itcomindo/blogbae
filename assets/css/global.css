@@ -1282,8 +1282,8 @@ https://flickity.metafizzy.co
   position: absolute;
   top: 8px;
   right: 8px;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1301,7 +1301,7 @@ https://flickity.metafizzy.co
   background-color: var(--transparent-light-7);
 }
 #headline .inner-section .container .wrapper .item .top .icon i {
-  font-size: 60%;
+  font-size: 75%;
 }
 #headline .inner-section .container .wrapper .item .excerpt {
   font-size: 90%;
@@ -1572,10 +1572,13 @@ https://flickity.metafizzy.co
   flex-direction: column;
   overflow: hidden;
 }
+#rlp .inner-section .container .wrapper #wrapper-left #prev-next-btn {
+  display: none;
+}
 #rlp .inner-section .container .wrapper #wrapper-left .top h2 {
   font-size: var(--font-clamp-2);
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr {
+#rlp .inner-section .container .wrapper #wrapper-left .items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1587,35 +1590,35 @@ https://flickity.metafizzy.co
   overflow: hidden;
 }
 @media (max-width: 839px) {
-  #rlp .inner-section .container .wrapper #wrapper-left .items-wr {
+  #rlp .inner-section .container .wrapper #wrapper-left .items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (max-width: 424px) {
-  #rlp .inner-section .container .wrapper #wrapper-left .items-wr {
+  #rlp .inner-section .container .wrapper #wrapper-left .items {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item {
+#rlp .inner-section .container .wrapper #wrapper-left .items .item {
   display: grid;
   grid-template-columns: 200px 1fr;
   border-bottom: 1px dashed var(--transparent-dark-2);
 }
 @media (max-width: 839px) {
-  #rlp .inner-section .container .wrapper #wrapper-left .items-wr .item {
+  #rlp .inner-section .container .wrapper #wrapper-left .items .item {
     grid-template-columns: 1fr;
   }
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item .left {
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .left {
   aspect-ratio: 16/9;
   position: relative;
   overflow: hidden;
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item .left a {
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .left a {
   display: block;
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item .left a img {
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .left a img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -1623,7 +1626,7 @@ https://flickity.metafizzy.co
   -webkit-transition: 0.3s linear all;
   transition: 0.3s linear all;
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item .left .icon {
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .left .icon {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -1645,22 +1648,43 @@ https://flickity.metafizzy.co
   z-index: 2;
   background-color: var(--transparent-light-7);
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item .left .icon i {
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .left .icon i {
   font-size: 60%;
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item .right {
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .right {
+  position: relative;
   padding: 0 10px 0 10px;
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item .right .date {
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .right .date {
   font-size: 60%;
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item .right h3 {
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .right .count {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .right h3 {
   font-size: var(--font-clamp-1);
   font-weight: 500;
   margin: 4px 0;
   line-height: 1.2;
 }
-#rlp .inner-section .container .wrapper #wrapper-left .items-wr .item .right h3 a:hover {
+#rlp .inner-section .container .wrapper #wrapper-left .items .item .right h3 a:hover {
   text-decoration: underline;
 }
 #rlp .inner-section .container .wrapper #wrapper-right {
@@ -1935,6 +1959,156 @@ https://flickity.metafizzy.co
 }
 #sing .inner-section .container .wrapper #post-tags-wr ul li a:hover {
   background-color: var(--color-light-2);
+}
+#sing .inner-section .container .wrapper .comment-form-wr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: var(--color-light-1);
+  padding: 20px;
+}
+#sing .inner-section .container .wrapper .comment-form-wr h3 {
+  font-size: var(--font-clamp-1);
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  -webkit-margin-before: 0;
+  margin-block-start: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0;
+  -webkit-padding-start: 0;
+  padding-inline-start: 0;
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist li > div {
+  background-color: var(--cp1-dark);
+  border-radius: 5px;
+  color: var(--color-light-1);
+  padding: 20px 10px;
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist li > div p {
+  font-size: 80%;
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist li > div .vcard {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  color: var(--color-light-1);
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist li > div .vcard img {
+  border-radius: 50%;
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist li > div .vcard cite a {
+  color: var(--color-light-1);
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist li > div .comment-meta {
+  font-size: 80%;
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist li > div .comment-meta a {
+  color: var(--color-light-1);
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist li > div .reply {
+  font-size: 80%;
+}
+#sing .inner-section .container .wrapper .comment-form-wr ol.commentlist li > div .reply a {
+  color: var(--color-light-1);
+  text-decoration: underline;
+}
+#sing .inner-section .container .wrapper .comment-form-wr #respond {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+}
+#sing .inner-section .container .wrapper .comment-form-wr #respond h3 {
+  font-size: var(--font-clamp-1);
+}
+#sing .inner-section .container .wrapper .comment-form-wr #respond form {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#sing .inner-section .container .wrapper .comment-form-wr #respond form p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#sing .inner-section .container .wrapper .comment-form-wr #respond form p input,
+#sing .inner-section .container .wrapper .comment-form-wr #respond form p textarea {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 5px;
+  border: none;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  border-radius: 5px;
+}
+#sing .inner-section .container .wrapper .comment-form-wr #respond form p input:focus,
+#sing .inner-section .container .wrapper .comment-form-wr #respond form p textarea:focus {
+  outline: none;
+  border: 1px solid var(--cp1-dark);
+}
+#sing .inner-section .container .wrapper .comment-form-wr #respond form p.comment-form-cookies-consent {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+#sing .inner-section .container .wrapper .comment-form-wr #respond form p.comment-form-cookies-consent input {
+  margin-right: 10px;
+}
+#sing .inner-section .container .wrapper .comment-form-wr #respond form p.form-submit {
+  background-color: var(--cp1-dark);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 5px;
+}
+#sing .inner-section .container .wrapper .comment-form-wr #respond form p.form-submit input[type=submit] {
+  background-color: var(--cp1-dark);
+  color: var(--color-light-1);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 5px;
 }
 
 #rp .inner-section .container .wrapper {

@@ -19,6 +19,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
         stickyPostFlickity();
         // sticky post flickity end.
 
+        // InfiniteScroll Start.
+        function infiniteScroll() {
+            jQuery('.items.infinite').infiniteScroll({
+                // options
+                path: '.next a',
+                append: '.item.infinite',
+                history: false,
+                loadOnScroll: true,
+                checkLastPage: true,
+                scrollThreshold: 400,
+            });
+        }
+        infiniteScroll();
+
+
+
+
+
+
+
 
 
 

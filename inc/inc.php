@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * Includes
@@ -6,13 +7,13 @@
  * @package mm
  */
 
-defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
+defined('ABSPATH') || die('No script kiddies please!');
 
 
 require_once THEME_PATH . '/inc/inc-menu.php';
 require_once THEME_PATH . '/inc/query.php';
 require_once THEME_PATH . '/inc/plugins.php';
-require_once THEME_PATH . '/inc/options.php';
+require_once THEME_PATH . '/inc/options/options.php';
 
 
 
@@ -26,19 +27,20 @@ require_once THEME_PATH . '/inc/options.php';
  *
  * @return string|null The data attribute string for the post type, or null if not a single post.
  */
-function bb_post_type_data_attribute() {
-	if ( is_single() ) {
+function bb_post_type_data_attribute()
+{
+	if (is_single()) {
 		$the_post_id   = get_the_ID();
-		$the_post_type = carbon_get_post_meta( $the_post_id, 'bb_post_type' );
+		$the_post_type = carbon_get_post_meta($the_post_id, 'bb_post_type');
 
-		if ( 'video' === $the_post_type ) {
+		if ('video' === $the_post_type) {
 			$post_type = 'video';
-		} elseif ( 'gallery' === $the_post_type ) {
+		} elseif ('gallery' === $the_post_type) {
 			$post_type = 'gallery';
 		} else {
 			$post_type = 'standard';
 		}
-		return esc_attr( $post_type );
+		return esc_attr($post_type);
 	}
 	return '';
 }

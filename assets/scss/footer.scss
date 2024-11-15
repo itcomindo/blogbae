@@ -1,6 +1,8 @@
 #footer {
   background: linear-gradient(to right, #111111, #000000, #111111);
   color: var(--color-light-1);
+  position: relative;
+  z-index: 554;
 
   .inner-section {
     .container {

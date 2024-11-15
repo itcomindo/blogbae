@@ -76,7 +76,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         // Resize Function Start.
         jQuery(window).resize(function () {
-            stickyJs();
+            initSticky();
             callMobileMenu();
         });
         // Resize Function End.

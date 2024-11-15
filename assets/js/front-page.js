@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 scrollThreshold: 400,
             });
         }
-        // infiniteScroll();
+        infiniteScroll();
 
 
 

@@ -31,7 +31,9 @@ defined('ABSPATH') || die('No script kiddies please!');
 					</div>
 
 					<div id="head-trigger" class="mm-trigger">
-						<i class="fas fa-bars"></i>
+						<?php
+						get_template_part('components/bars');
+						?>
 					</div>
 
 

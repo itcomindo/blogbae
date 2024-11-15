@@ -920,6 +920,76 @@ a.btn.borad-5 {
   display: none;
   cursor: pointer;
 }
+#header .inner-section .container .wrapper .right #head-trigger .bars {
+  width: 25px;
+  height: 20px;
+  position: relative;
+}
+#header .inner-section .container .wrapper .right #head-trigger .bars .bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+#header .inner-section .container .wrapper .right #head-trigger .bars .bar:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#header .inner-section .container .wrapper .right #head-trigger .bars .bar:nth-child(2) {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+#header .inner-section .container .wrapper .right #head-trigger .bars .bar:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#header .inner-section .container .wrapper .right #head-trigger .bars.active {
+  width: 25px;
+  height: 20px;
+  position: relative;
+}
+#header .inner-section .container .wrapper .right #head-trigger .bars.active .bar {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+}
+#header .inner-section .container .wrapper .right #head-trigger .bars.active .bar:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+#header .inner-section .container .wrapper .right #head-trigger .bars.active .bar:nth-child(2) {
+  width: 75%;
+  position: absolute;
+  top: 50%;
+  left: 200%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
+#header .inner-section .container .wrapper .right #head-trigger .bars.active .bar:nth-child(3) {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  -webkit-transform: translateY(50%) rotate(-45deg);
+  transform: translateY(50%) rotate(-45deg);
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+}
 @media (max-width: 768px) {
   #header .inner-section .container .wrapper .right #head-trigger {
     display: -webkit-box;
@@ -2589,7 +2659,7 @@ span.icon {
   border-top: 1px solid var(--transparent-light-1);
 }
 #mobap .inner .items .item {
-  padding: 8px 0;
+  padding: 12px 0;
 }
 #mobap .inner .items .item a,
 #mobap .inner .items .item span {
@@ -2605,6 +2675,10 @@ span.icon {
   -ms-flex-align: center;
   align-items: center;
 }
+#mobap .inner .items .item a i,
+#mobap .inner .items .item span i {
+  font-size: 16px;
+}
 
 #mm {
   position: fixed;
@@ -2617,8 +2691,8 @@ span.icon {
   -webkit-transform: translateX(-350px);
   transform: translateX(-350px);
   z-index: 5555;
-  -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
-  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) all;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
   display: none;
 }
 @media (max-width: 840px) {
@@ -2654,7 +2728,7 @@ span.icon {
   z-index: -1;
 }
 #mm .close.active {
-  color: white;
+  color: red;
   z-index: 0;
   right: -30px;
   -webkit-transition: 0.3s linear all;

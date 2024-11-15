@@ -30,6 +30,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // StickyJS End.
 
         //Call Mobile Menu Start.
+
+
+        function callMobileMenuAnim() {
+            jQuery('.bars').on('click', function () {
+                jQuery('.bars').toggleClass('active');
+            });
+        }
+        // callMobileMenuAnim();
+
+
+
         function callMobileMenu() {
             var $screenWidth = screenWidth();
             if ($screenWidth < 769) {
@@ -38,7 +49,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 // Event untuk membuka menu ketika trigger diklik
                 $trigger.on('click', function (e) {
                     e.stopPropagation();
-                    // jQuery(this).hide();
+                    jQuery('.bars').toggleClass('active');
                     jQuery('#mm').toggleClass('active');
                     setTimeout(function () {
                         jQuery('#mm .close').toggleClass('active');
@@ -49,7 +60,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 jQuery('#mm .close').on('click', function () {
                     jQuery('#mm').removeClass('active');
                     jQuery('#mm .close').removeClass('active');
-                    // $trigger.show();
+                    jQuery('.bars').removeClass('active');
+
+
+
+
                 });
 
                 // Event untuk menutup menu ketika klik di luar elemen #mm
@@ -57,7 +72,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     if (!jQuery(e.target).closest('#mm').length && !jQuery(e.target).closest('.mm-trigger').length) {
                         jQuery('#mm').removeClass('active');
                         jQuery('#mm .close').removeClass('active');
-                        // $trigger.show();
+                        jQuery('.bars').removeClass('active');
                     }
                 });
 
@@ -65,12 +80,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 jQuery('#mm').on('click', function () {
                     jQuery('#mm').removeClass('active');
                     jQuery('#mm .close').removeClass('active');
-                    // $trigger.show();
+                    jQuery('.bars').removeClass('active');
                 });
             }
         }
         callMobileMenu();
         //Call Mobile Menu End.
+
+
+
 
 
 

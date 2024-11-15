@@ -18,6 +18,22 @@ defined('ABSPATH') || die('No script kiddies please!');
 	<meta name="googlebot" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="preload" href="/wp-content/themes/blogbae/assets/fonts/Roboto-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="/wp-content/themes/blogbae/assets/fonts/Roboto-Light.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="/wp-content/themes/blogbae/assets/fonts/Roboto-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="/wp-content/themes/blogbae/assets/fonts/Roboto-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="/wp-content/themes/blogbae/assets/fonts/Roboto-Black.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="/wp-content/themes/blogbae/assets/fonts/Roboto-BlackItalic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="/wp-content/themes/blogbae/assets/fonts/Roboto-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+	<?php
+	if (is_home() || is_front_page()) {
+	?>
+		<link rel="preload" href="https://blogbae.budiharyono.id/wp-content/themes/blogbae/assets/images/fpherobg.webp" as="image" type="image/webp">
+	<?php
+	}
+	?>
+
 	<?php wp_head(); ?>
 </head>
 

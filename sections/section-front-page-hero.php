@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * Front Page Hero
@@ -6,7 +7,7 @@
  * @package bb
  */
 
-defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
+defined('ABSPATH') || die('No script kiddies please!');
 
 ?>
 
@@ -20,7 +21,7 @@ defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
 					<a class="btn big dark max-width borad-5" href="#">Contact Me</a>
 				</div>
 				<div class="right">
-					<img class="find-this" src="<?php echo esc_url( THEME_URI . '/assets/images/fpherobg.webp' ); ?>" alt="">
+					<img src="<?php echo esc_url(THEME_URI . '/assets/images/fpherobg.webp'); ?>" alt="Blog Budi Haryono" width="512" height="512">
 				</div>
 			</div>
 		</div>

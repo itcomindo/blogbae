@@ -153,13 +153,32 @@ function bb_post_has_comments_query()
 
 
 
-function bb_post_has_comments_queryxxxx()
+function bb_show_post_has_comments()
 {
-	$args = array(
-		'post_type'           => 'post',
-		'posts_per_page'      => 5,
-		'ignore_sticky_posts' => 1,
-	);
-	$query = new WP_Query($args);
-	return $query;
+	$pwc = bb_post_has_comments_query();
+	if ($pwc->have_posts()) {
+		$the_post_id = get_the_ID();
+		$post_date = get_the_date('Y-m-d', $the_post_id);
+		echo '<div class="sidebar-content">';
+		echo '<h3>Viral</h3>';
+		echo '<ul class="items list-no-style">';
+		while ($pwc->have_posts()) {
+			$pwc->the_post();
+			$the_post_id = get_the_ID();
+?>
+			<li class="item">
+				<div class="left">
+					<?php echo bb_post_comment_icon($the_post_id); ?>
+					<a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>"><?php echo bb_post_thumbnail($the_post_id, 'full', true, 'fim'); ?></a>
+				</div>
+				<div class="right">
+					<h3><a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>"><?php echo bb_post_title($the_post_id, 70); ?></a></h3>
+				</div>
+			</li>
+<?php
+		}
+		echo '</ul>';
+		echo '</div>';
+	}
+	wp_reset_postdata();
 }

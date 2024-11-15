@@ -14,6 +14,7 @@
 @use "sticky-post";
 @use "rest-lates-post";
 @use "single";
+@use "sidebar";
 // @use "list";
 // @use "topbar";
 // @use "sidebarmenu";
@@ -22,5 +23,5 @@
 // @use "archive";
 // @use "posttags";
 // @use "relatedpost";
-// @use "footer";
+@use "footer";
 @use "mobile-menu";

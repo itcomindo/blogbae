@@ -9,16 +9,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
         // StickyJS Start.
-        function stickyJs() {
-            var $screenWidth = screenWidth();
-            if ($screenWidth > 768) {
-                var sticky = new Sticky('.sidebars');
+        function initSticky() {
+            var screenWidth = screen.width;
+            var dataSticky = jQuery('#wrapper-right').attr('data-sticky');
+
+            if (screenWidth > 768 && dataSticky === 'true') {
+                var sidebar = document.querySelector('.sidebars');
+                var offsetTop = sidebar.offsetTop;
+
+                window.addEventListener('scroll', function () {
+                    if (window.pageYOffset > offsetTop) {
+                        sidebar.classList.add('is-sticky');
+                    } else {
+                        sidebar.classList.remove('is-sticky');
+                    }
+                });
             }
         }
-        stickyJs();
+        initSticky();
         // StickyJS End.
 
-        //Call Mobile Menu Start.
         //Call Mobile Menu Start.
         function callMobileMenu() {
             var $screenWidth = screenWidth();
@@ -28,7 +38,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 // Event untuk membuka menu ketika trigger diklik
                 $trigger.on('click', function (e) {
                     e.stopPropagation();
-                    jQuery(this).hide();
+                    // jQuery(this).hide();
                     jQuery('#mm').toggleClass('active');
                     setTimeout(function () {
                         jQuery('#mm .close').toggleClass('active');
@@ -39,7 +49,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 jQuery('#mm .close').on('click', function () {
                     jQuery('#mm').removeClass('active');
                     jQuery('#mm .close').removeClass('active');
-                    $trigger.show();
+                    // $trigger.show();
                 });
 
                 // Event untuk menutup menu ketika klik di luar elemen #mm
@@ -47,7 +57,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     if (!jQuery(e.target).closest('#mm').length && !jQuery(e.target).closest('.mm-trigger').length) {
                         jQuery('#mm').removeClass('active');
                         jQuery('#mm .close').removeClass('active');
-                        $trigger.show();
+                        // $trigger.show();
                     }
                 });
 
@@ -55,7 +65,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 jQuery('#mm').on('click', function () {
                     jQuery('#mm').removeClass('active');
                     jQuery('#mm .close').removeClass('active');
-                    $trigger.show();
+                    // $trigger.show();
                 });
             }
         }

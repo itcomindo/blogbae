@@ -43,6 +43,11 @@ function bb_option_sidebar()
         Field::make('separator', 'sepsidebar', 'Sidebar Options')
             ->set_classes('sep'),
 
+        //Checkbox Enable Stciky Sidebar.
+        Field::make('checkbox', 'bb_enable_sticky_sidebar', 'Enable Sticky Sidebar')
+            ->set_help_text('Check this box to enable sticky sidebar to make it sticky on scroll.')
+            ->set_default_value(true),
+
         //number of post to show on sidebar.
         Field::make('text', 'bb_sidebar_post_number', 'Number of Posts to Show')
             ->set_default_value('5')

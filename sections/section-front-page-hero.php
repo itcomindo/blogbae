@@ -21,7 +21,9 @@ defined('ABSPATH') || die('No script kiddies please!');
 					<a class="btn big dark max-width borad-5" href="#">Contact Me</a>
 				</div>
 				<div class="right">
-					<img src="<?php echo esc_url(THEME_URI . '/assets/images/fpherobg.webp'); ?>" alt="Blog Budi Haryono" width="512" height="512">
+					<div class="inner">
+						<img src="<?php echo esc_url(THEME_URI . '/assets/images/fpherobg1.webp'); ?>" alt="Blog Budi Haryono" width="512" height="512">
+					</div>
 				</div>
 			</div>
 		</div>

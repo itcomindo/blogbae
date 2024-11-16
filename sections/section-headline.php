@@ -60,6 +60,7 @@ defined('ABSPATH') || die('No script kiddies please!');
 												'a' => array(
 													'href'  => array(),
 													'title' => array(),
+													'rel'   => array(),
 												),
 											)
 										);

@@ -1011,6 +1011,9 @@ a.btn.borad-5 {
   flex-grow: 1;
   width: auto;
 }
+#header .inner-section .container .wrapper .mid #header-button-wr a.btn.light {
+  color: var(--color-primary);
+}
 @media (max-width: 840px) {
   #header .inner-section .container .wrapper .mid #header-button-wr a.btn {
     color: var(--color-light-1);

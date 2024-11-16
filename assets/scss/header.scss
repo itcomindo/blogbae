@@ -137,6 +137,10 @@
             width: auto;
 
             a.btn {
+              &.light {
+                color: var(--color-primary);
+              }
+
               @media (max-width: 840px) {
                 color: var(--color-light-1);
                 &.medium {

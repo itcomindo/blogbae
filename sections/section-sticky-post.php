@@ -57,12 +57,12 @@ function bb_sticky_posts()
 							<div class="top">
 								<?php echo bb_post_comment_icon($the_post_id); ?>
 								<span class="icon"><?php echo wp_kses(bb_post_type_icon($the_post_id), bb_allowed()); ?></span>
-								<a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>"><?php echo wp_kses(bb_post_thumbnail($the_post_id, 'full', true, 'fim'), bb_allowed()); ?></a>
+								<a tabindex="-1" href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>"><?php echo wp_kses(bb_post_thumbnail($the_post_id, 'full', true, 'fim'), bb_allowed()); ?></a>
 							</div>
 
 							<!-- bottom -->
 							<div class="bot">
-								<h3 class="head-smaller"><a href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>"><?php echo esc_html(bb_post_title($the_post_id, 100)); ?></a></h3>
+								<h3 class="head-smaller"><a tabindex="-1" href="<?php echo esc_html(get_the_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>"><?php echo esc_html(bb_post_title($the_post_id, 100)); ?></a></h3>
 							</div>
 						</div>
 				<?php

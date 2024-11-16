@@ -30,17 +30,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
         // StickyJS End.
 
         //Call Mobile Menu Start.
-
-
-        function callMobileMenuAnim() {
-            jQuery('.bars').on('click', function () {
-                jQuery('.bars').toggleClass('active');
-            });
-        }
-        // callMobileMenuAnim();
-
-
-
         function callMobileMenu() {
             var $screenWidth = screenWidth();
             if ($screenWidth < 841) {

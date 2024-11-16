@@ -20,10 +20,14 @@ defined('ABSPATH') || die('No script kiddies please!');
 				</div>
 				<div class="mid">
 					<div id="header-search-wr" class="item">
-						<form id="searchform" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-							<input type="text" class="search-field" name="s" placeholder="Search" value="<?php echo get_search_query(); ?>">
-							<button><i class="fas fa-magnifying-glass"></i></button>
+						<form id="searchform" method="get" action="<?php echo esc_url(home_url('/')); ?>" aria-label="Search form">
+							<label for="search-field">Search</label>
+							<input type="text" id="search-field" class="search-field" name="s" placeholder="Search" value="<?php echo get_search_query(); ?>">
+							<button type="submit" aria-label="Search">
+								<i class="fas fa-magnifying-glass"></i>
+							</button>
 						</form>
+
 					</div>
 					<div id="header-button-wr" class="item">
 						<a href="#" class="btn medium hover-top">Signin</a>

@@ -73,6 +73,9 @@
 
             form {
               box-sizing: border-box;
+              label {
+                display: none;
+              }
 
               input[type="text"] {
                 box-sizing: border-box;

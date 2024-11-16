@@ -33,7 +33,7 @@ defined('ABSPATH') || die('No script kiddies please!');
 							<div class="top">
 								<span class="icon"><?php echo wp_kses(bb_post_type_icon($the_post_id), bb_allowed()); ?></span>
 								<a class="link" href="<?php echo esc_html(get_the_permalink($the_post_id)); ?>" title="<?php echo esc_attr(get_the_title()); ?>">
-									<?php echo wp_kses(bb_post_thumbnail($the_post_id, 'full', false, 'fim'), bb_allowed()); ?>
+									<?php echo wp_kses(bb_post_thumbnail($the_post_id, 'full', true, 'fim'), bb_allowed()); ?>
 								</a>
 							</div>
 							<div class="bot">

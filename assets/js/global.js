@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         function callMobileMenu() {
             var $screenWidth = screenWidth();
-            if ($screenWidth < 769) {
+            if ($screenWidth < 841) {
                 var $trigger = jQuery('.mm-trigger');
 
                 // Event untuk membuka menu ketika trigger diklik
@@ -61,10 +61,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     jQuery('#mm').removeClass('active');
                     jQuery('#mm .close').removeClass('active');
                     jQuery('.bars').removeClass('active');
-
-
-
-
                 });
 
                 // Event untuk menutup menu ketika klik di luar elemen #mm
@@ -87,6 +83,32 @@ window.addEventListener('DOMContentLoaded', (event) => {
         callMobileMenu();
         //Call Mobile Menu End.
 
+        //Call Search Form Start.
+        function callSearchForm() {
+            var $screenWidth = screenWidth();
+            if ($screenWidth < 541) {
+                jQuery('#header-search-wr').slideUp();
+
+                // Toggle search form on click of the trigger
+                jQuery('.search-trigger').on('click', function (e) {
+                    e.stopPropagation(); // Prevent triggering the click event on the document
+                    jQuery('#header-search-wr').slideToggle().toggleClass('active');
+                });
+
+                // Close the search form when clicking outside
+                jQuery(document).on('click', function (e) {
+                    if (!jQuery(e.target).closest('#header-search-wr, .search-trigger').length) {
+                        if (jQuery('#header-search-wr').hasClass('active')) {
+                            jQuery('#header-search-wr').slideUp().removeClass('active');
+                        }
+                    }
+                });
+            }
+        }
+        callSearchForm();
+
+        //Call Search Form End.
+
 
 
 
@@ -96,6 +118,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         jQuery(window).resize(function () {
             initSticky();
             callMobileMenu();
+            callSearchForm();
         });
         // Resize Function End.
 

@@ -18,7 +18,7 @@ defined('ABSPATH') || die('No script kiddies please!');
 				<div class="left">
 					<h2 class="head-small"><a href="/">BlogBae</a></h2>
 				</div>
-				<div class="right">
+				<div class="mid">
 					<div id="header-search-wr" class="item">
 						<form id="searchform" method="get" action="<?php echo esc_url(home_url('/')); ?>">
 							<input type="text" class="search-field" name="s" placeholder="Search" value="<?php echo get_search_query(); ?>">
@@ -28,16 +28,23 @@ defined('ABSPATH') || die('No script kiddies please!');
 					<div id="header-button-wr" class="item">
 						<a href="#" class="btn medium hover-top">Signin</a>
 						<a href="#" class="btn border medium light hover-top borad-5">Signup</a>
+						<div class="search-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
 					</div>
 
+
+
+
+				</div>
+
+				<div class="right">
 					<div id="head-trigger" class="mm-trigger">
 						<?php
 						get_template_part('components/bars');
 						?>
 					</div>
-
-
 				</div>
+
+
 			</div>
 		</div>
 	</div>

@@ -4,7 +4,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 
         function galleryFlickity() {
-            jQuery('.items').flickity({
+            jQuery('#sing .items').flickity({
                 //options.
                 'cellAlign': 'left',
                 'contain': true,

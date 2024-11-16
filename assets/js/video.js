@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         // sticky post flickity start.
         function videoFlickity() {
-            jQuery('.items').flickity({
+            jQuery('#sing .items').flickity({
                 //options.
                 'cellAlign': 'left',
                 'contain': true,

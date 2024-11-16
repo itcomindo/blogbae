@@ -2691,6 +2691,9 @@ span.icon {
   flex-direction: row;
   gap: 8px;
 }
+#footer .inner-section .container .wrapper .top form label {
+  display: none;
+}
 #footer .inner-section .container .wrapper .top form input {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;

@@ -15,9 +15,12 @@ defined('ABSPATH') || die('No script kiddies please!');
         <div class="container">
             <div class="wrapper">
                 <div class="top">
-                    <form id="searchform" method="get" action="<?php echo esc_url(home_url('/')); ?>">
-                        <input type="text" class="search-field" name="s" placeholder="Search" value="<?php echo esc_html(get_search_query()); ?>">
-                        <button><i class="fas fa-magnifying-glass"></i></button>
+                    <form id="searchform" method="get" action="<?php echo esc_url(home_url('/')); ?>" aria-label="Search form">
+                        <label for="search-field">Search</label>
+                        <input type="text" id="search-field" class="search-field" name="s" placeholder="Search" value="<?php echo get_search_query(); ?>">
+                        <button type="submit" aria-label="Search">
+                            <i class="fas fa-magnifying-glass"></i>
+                        </button>
                     </form>
                 </div>
                 <div class="bot">

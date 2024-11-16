@@ -22,7 +22,7 @@ defined('ABSPATH') || die('No script kiddies please!');
 				</div>
 				<div class="right">
 					<div class="inner">
-						<img src="<?php echo esc_url(THEME_URI . '/assets/images/fpherobg1.webp'); ?>" alt="Blog Budi Haryono" width="512" height="512">
+						<img src="<?php echo esc_url(THEME_URI . '/assets/images/fpherobg1.webp'); ?>" alt="Blog Budi Haryono" class="find-this">
 					</div>
 				</div>
 			</div>

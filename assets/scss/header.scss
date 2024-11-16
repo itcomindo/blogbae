@@ -139,6 +139,10 @@
             a.btn {
               &.light {
                 color: var(--color-primary);
+
+                @media (max-width: 840px) {
+                  background-color: var(--color-light-3);
+                }
               }
 
               @media (max-width: 840px) {

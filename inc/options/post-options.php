@@ -31,6 +31,11 @@ function bb_post_options() {
 					)
 					->set_default_value( 'post' ),
 
+				// cb-checkbox field to enable code highlighter.
+				Field::make( 'checkbox', 'bb_post_code_highlighter', 'Enable Code Highlighter' )
+					->set_help_text( 'Check this box to enable code highlighter.' )
+					->set_default_value( false ),
+
 				// complex field contain text field for video url and image field for video thumbnail. show only if video post is selected.
 				Field::make( 'complex', 'bb_post_video', 'Video' )
 					->add_fields(
@@ -63,33 +68,37 @@ function bb_post_options() {
                             '
 					),
 
-
-					// Media Gallery field to select multiple images. show only if gallery post is selected.
-
-					Field::make('complex', 'bb_post_gallery', 'Gallery')
-					->add_fields(
-						array(
-							// Title field.
-							Field::make('text', 'bb_post_gallery_title', 'Title')
-								->set_help_text('Enter the title for gallery post.'),
-							// Image URL.
-							Field::make('image', 'bb_post_gallery_url', 'Image')
-								->set_value_type('url')
-								->set_help_text('Upload image for gallery post.'),
-						)
+				// Media Gallery field to select multiple images. show only if gallery post is selected.
+				Field::make( 'complex', 'bb_post_gallery', 'Gallery' )
+				->add_fields(
+					array(
+						// Title field.
+						Field::make( 'text', 'bb_post_gallery_title', 'Title' )
+							->set_help_text( 'Enter the title for gallery post.' ),
+						// Image URL.
+						Field::make( 'image', 'bb_post_gallery_url', 'Image' )
+							->set_value_type( 'url' )
+							->set_help_text( 'Upload image for gallery post.' ),
 					)
-					->set_layout( 'tabbed-horizontal' )
-					->set_header_template(
-						'
+				)
+				->set_layout( 'tabbed-horizontal' )
+				->set_header_template(
+					'
                                 <% if (bb_post_gallery_title) { %>
                                     <%- bb_post_gallery_title %>
                                 <% } else { %>
                                     Title
                                 <% } %>
                             '
+				)
+				->set_conditional_logic(
+					array(
+						array(
+							'field' => 'bb_post_type',
+							'value' => 'gallery',
+						),
 					)
-
-
+				),
 
 			)
 		);

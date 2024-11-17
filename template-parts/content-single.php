@@ -13,6 +13,9 @@ if ( is_single() ) {
 	$the_post_type = carbon_get_post_meta( $the_post_id, 'bb_post_type' );
 }
 
+
+
+
 ?>
 
 <section id="sing" class="section section-small">
@@ -51,9 +54,9 @@ if ( is_single() ) {
 				</div>
 
 				<!-- Comment Form -->
-				 <?php
-				 get_template_part( 'template-parts/comment-form' );
-				 ?>
+				<?php
+					get_template_part( 'template-parts/comment-form' );
+				?>
 
 
 			</div>

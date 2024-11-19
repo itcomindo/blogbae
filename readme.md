@@ -19,7 +19,12 @@ Blogbae is licensed under the GNU General Public License v2 or later.
 - [Budi Haryono](https://budiharyono.id)
 
 ## Changelog
-### 1.0.0
+
+### 0.0.1
+- Create and Add theme functionalities
+- Add theme options 
+
+### 0.0.0
 - Initial release
 
 ## Support

@@ -1,8 +1,6 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     jQuery(function () {
         //JQuery start below.
-
-
         function galleryFlickity() {
             jQuery('#sing .items').flickity({
                 //options.
@@ -12,13 +10,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 // 'prevNextButtons': false,
                 'wrapAround': true,
                 // 'autoPlay': 5000,
-
             });
         }
         galleryFlickity();
-
-
-
         //JQuery end above.
     });
 });

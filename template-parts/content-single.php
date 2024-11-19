@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * Content Single Template
@@ -6,11 +7,11 @@
  * @package bb
  */
 
-defined( 'ABSPATH' ) || die( 'No script kiddies please!' );
+defined('ABSPATH') || die('No script kiddies please!');
 
-if ( is_single() ) {
+if (is_single()) {
 	$the_post_id   = get_the_ID();
-	$the_post_type = carbon_get_post_meta( $the_post_id, 'bb_post_type' );
+	$the_post_type = carbon_get_post_meta($the_post_id, 'bb_post_type');
 }
 
 
@@ -23,22 +24,25 @@ if ( is_single() ) {
 		<div class="container">
 			<div class="wrapper">
 				<div class="meta row">
-					<small class="date"><?php echo esc_html( bb_post_published_date( $the_post_id ) ); ?></small>
-					<h1 id="post-title"><?php echo esc_html( bb_post_title( $the_post_id, 200 ) ); ?></h1>
-					<small class="author">Writen by: <?php echo esc_html( bb_post_author( $the_post_id, false ) ); ?></small>
-					<?php echo wp_kses( bb_post_category( $the_post_id, true ), bb_allowed() ); ?>
+					<?php
+					echo bb_edit_post_link($the_post_id);
+					?>
+					<small class="date"><?php echo esc_html(bb_post_published_date($the_post_id)); ?></small>
+					<h1 id="post-title"><?php echo esc_html(bb_post_title($the_post_id, 200)); ?></h1>
+					<small class="author">Writen by: <?php echo esc_html(bb_post_author($the_post_id, false)); ?></small>
+					<?php echo wp_kses(bb_post_category($the_post_id, true), bb_allowed()); ?>
 				</div>
 				<?php
-				if ( 'video' === $the_post_type ) {
-					get_template_part( 'template-parts/video-player' );
-				} elseif ( 'gallery' === $the_post_type ) {
-					get_template_part( 'template-parts/gallery-player' );
+				if ('video' === $the_post_type) {
+					get_template_part('template-parts/video-player');
+				} elseif ('gallery' === $the_post_type) {
+					get_template_part('template-parts/gallery-player');
 				} else {
-					?>
+				?>
 					<div class="fim-wr">
-						<?php echo wp_kses( bb_post_thumbnail( $the_post_id, 'full', false, 'fim' ), bb_allowed() ); ?>
+						<?php echo wp_kses(bb_post_thumbnail($the_post_id, 'full', false, 'fim'), bb_allowed()); ?>
 					</div>
-					<?php
+				<?php
 				}
 				?>
 
@@ -49,13 +53,13 @@ if ( is_single() ) {
 				</div>
 				<div id="post-tags-wr">
 					<?php
-					echo wp_kses( bb_post_tags( $the_post_id ), bb_allowed() );
+					echo wp_kses(bb_post_tags($the_post_id), bb_allowed());
 					?>
 				</div>
 
 				<!-- Comment Form -->
 				<?php
-					get_template_part( 'template-parts/comment-form' );
+				get_template_part('template-parts/comment-form');
 				?>
 
 
@@ -111,5 +115,5 @@ if ( is_single() ) {
 
 <?php
 
-get_template_part( 'template-parts/content-single-related-post' );
-get_template_part( 'template-parts/content-more-post' );
+get_template_part('template-parts/content-single-related-post');
+get_template_part('template-parts/content-more-post');

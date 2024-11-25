@@ -3049,6 +3049,15 @@ span.icon {
   font-size: 16px;
 }
 
+#copyright {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--cp3-dark);
+  color: var(--color-light-2);
+  z-index: 9999;
+}
+
 #mm {
   position: fixed;
   top: 0;

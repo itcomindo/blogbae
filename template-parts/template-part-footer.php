@@ -71,4 +71,9 @@ defined('ABSPATH') || die('No script kiddies please!');
         </div>
     </div>
 </footer>
+<div id="copyright" class="section">
+    <div class="inner-section">
+        <div class="container">Site still under developing</div>
+    </div>
+</div>
 <?php
